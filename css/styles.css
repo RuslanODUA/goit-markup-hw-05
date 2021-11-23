@@ -89,18 +89,32 @@ img {
   color: var(--title-text-color);
 }
 
+.nav-link.current::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-link-color);
+  border-radius: 2px;
+  bottom: 0;
+  right: 0;
+}
+
 .nav-link:hover,
 .nav-link.current,
 .nav-link:focus {
   color: var(--accent-link-color);
 }
-/* Flex box Flex box Flex box */
+/****************** Flex box Flex box Flex box ***********************/
 .nav-container {
   display: flex;
   align-items: center;
 }
 .nav-list {
   display: flex;
+}
+.nav-item {
+  position: relative;
 }
 .nav-item:not(:last-child) {
   margin-right: 50px;
